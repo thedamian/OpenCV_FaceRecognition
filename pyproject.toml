@@ -1,0 +1,11 @@
+[project]
+name = "opencv_example"
+version = "0.1.0"
+description = "Just a fun OpenCV Example to figure out who's in front of the camera"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "face-recognition>=1.3.0",
+    "numpy>=2.2.4",
+    "opencv-python>=4.11.0.86",
+]
