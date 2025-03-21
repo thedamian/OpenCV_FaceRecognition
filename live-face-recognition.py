@@ -6,7 +6,7 @@ import numpy as np
 video_capture = cv2.VideoCapture(0)
 
 # load a sample photo to learn facial fature
-damian_image = face_recognition.load_image_file('damian.jpg')
+damian_image = face_recognition.load_image_file('Damian1.jpg')
 damian_face_encoding = face_recognition.face_encodings(damian_image)[0]
 
 # let's train a second face
@@ -35,7 +35,8 @@ while True:
         #process frame
         small_frame = cv2.resize(frame,(0,0), fx=0.25, fy=0.25)
         #convert the RGB color(OPenCV uses to RGB (facerecognition))
-        rgb_msall_frame = small_frame[:,:,::-1]
+        #rgb_msall_frame = small_frame[:,:,::-1]
+        rgb_msall_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
         # find all face in current frame of video
         face_locations = face_recognition.face_locations(rgb_msall_frame)
